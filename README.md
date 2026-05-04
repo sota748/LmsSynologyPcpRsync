@@ -2,4 +2,4 @@
 
 ## Description:
 Principle diagram.  
-![diagram](jpg\lms_synology_pcp_rsync_diagram.jpg)
+![principlediagram](jpg\lms_synology_pcp_rsync_principle_diagram.jpg)
