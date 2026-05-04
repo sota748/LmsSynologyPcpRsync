@@ -1,4 +1,5 @@
 # LmsSynologyPcpRsync - ReadMe
 
 ## Description:
-![Overview](jpg\Lms_Synology_Pcp_Rsync_Diagram.jpg)
+Principle diagram.  
+![diagram](jpg\lms_synology_pcp_rsync_diagram.jpg)
