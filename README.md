@@ -1,5 +1,14 @@
 # LmsSynologyPcpRsync - ReadMe
-Glossary  
+
+## Installation description:
+* [pCP, Install & Setup on Raspberry Pi.](rpi/rpi_pcp.md)
+* [OpenVPN, NAS.](nas/nas_openvpn.md)
+* [OpenVPN, Router](nas/router_openvpn.md)
+* [OpenVPN, Raspberry Pi](rpi/rpi_openvpn.md)
+* [Rsync, NAS](nas/nas_rsync.md)
+* [Rsync, Raspberry Pi](rpi/rpi_rsync.md)
+
+## Glossary  
 - <u>LMS (Lyrion Media Server)</u>: A music server that streams your entire local music library and online radio to multiple players throughout your home, (https://lyrion.org/)  
 - <u>NAS</u>: A dedicated storage device connected to your network that lets multiple users store and access files from any computer. Synology NAS (https://www.synology.com/en-global)  
 - <u>Docker</u>: A tool that packages an application and everything it needs into a single container, so it runs perfectly on any computer (and NAS)  
@@ -13,8 +22,8 @@ I have a good friend who has Dementia at a young age (50 years old), and he love
 He has problems operating, among other things, the CD player, so I have made him a pCP player, it is operated by him (with help from his wife).  
 
 So that I can help from home, I have installed OpenVPN on it, this means that I from home can operate:  
-- LMS webinterface (xxx.xxx.xxx.xxx:9000)  
-- pCP webinterface, setup pages (xxx.xxx.xxx.xxx)  
+- LMS webinterface (IP: xxx.xxx.xxx.xxx:9000)  
+- pCP webinterface, setup pages (IP: xxx.xxx.xxx.xxx)  
 - Files on the USB-HB, with Samba  
 - SSH with PuTTY
 
@@ -43,11 +52,3 @@ I det eftefølgende er der beskrevet..........................
 * **NAS:** OpenVPn
 
 * **Synology NAS:** Rsync
-
-## Projektstruktur:
-* [pCP, Install & Setup on Raspberry Pi.](rpi/rpi_pcp.md)
-* [OpenVPN, NAS.](software/android_sync_app/android_sync_app.md)
-* [OpenVPN, Router](software/rpi_messure/rpi_messure.md)
-* [OpenVPN, Raspberry Pi](software/rpi_source_original/rpi_source_original.md)
-* [Rsync, NAS](hardware/hardware.md)
-* [Rsync, Raspberry Pi](dokumentation/manual.md)
