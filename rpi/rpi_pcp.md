@@ -7,6 +7,9 @@ Follow the instructions in the link below (rigth click and "Open in a new Tap/Wi
 After "Step 3 - Boot piCorePlayer", follow the instructions below
 
 ## pCP webinterface, setup pages (IP: xxx.xxx.xxx.xxx):
+pCP webinterface: Menu  
+![pCP menu](rpi_pcp_1_menu.png)  
+
 PiCorePlayer is used as both Player and Server
 
 ### Setup General:

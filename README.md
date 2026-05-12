@@ -31,7 +31,7 @@ So that I can help from home, I have installed OpenVPN on it, this means that I 
 - Files on the USB-HB, with Samba  
 - SSH with PuTTY
 
-But it was/is a hassle to keep the pCP USB-HD updated with the changes I made to home Music library on the NAS.  
+But it was/is a hassle to keep the pCP USB-HD updated with the changes I made to the Music library on the NAS.  
 So I decided to make an automatic update of the pCP USB-HD, so that it is always a mirror of my NAS library.  
 - To achieve this I have used rsync.  
 
