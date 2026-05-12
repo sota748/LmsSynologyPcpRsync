@@ -26,9 +26,9 @@ PiCorePlayer is used as both Player and Server
 
 ### Main Page:
 Install piCorePlayer extensions (Main Page -> Extensions -> main repository)
-- nano.tcz 
-- openvpn.tcz
-- rsync.tcz
+- nano.tcz  
+- openvpn.tcz (for OpenVPN)  
+- rsync.tcz  (for rsync)  
 
 ### Squeezelite Settings:
 - Audio output device settings
