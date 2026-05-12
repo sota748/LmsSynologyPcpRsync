@@ -13,13 +13,13 @@ The installation description is located here at the top so it is easier to jump 
 ## General description of the project.
 Should be read before starting the installation itself
 ### Glossary  
-- <u>LMS (Lyrion Media Server)</u>: A music server that streams your entire local music library and online radio to multiple players throughout your home, (https://lyrion.org/)  
-- <u>NAS</u>: A dedicated storage device connected to your network that lets multiple users store and access files from any computer. Synology NAS (https://www.synology.com/en-global)  
-- <u>Docker</u>: A tool that packages an application and everything it needs into a single container, so it runs perfectly on any computer (and NAS)  
-- <u>pCP (PiCorePlayer)</u>: A lightweight operating system that turns a Raspberry Pi into a high-quality music player for your Lyrion Music Server, (https://picoreplayer.org/)  
-- <u>"OpenVPN"</u>: Software that creates a secure, encrypted tunnel to your home or office network from anywhere in the world.  
-- <u>"samba"</u>: Software that connects Linux and Windows so they can easily share folders and printers.  
-- <u>"rsync"</u>: A software tool that efficiently copies and synchronizes files between folders or computers by only moving the changes.  
+- **LMS (Lyrion Media Server):** A music server that streams your entire local music library and online radio to multiple players throughout your home, (https://lyrion.org/)  
+- **NAS:** A dedicated storage device connected to your network that lets multiple users store and access files from any computer. Synology NAS (https://www.synology.com/en-global)  
+- **Docker:** A tool that packages an application and everything it needs into a single container, so it runs perfectly on any computer (and NAS)  
+- **pCP (PiCorePlayer):** A lightweight operating system that turns a Raspberry Pi into a high-quality music player for your Lyrion Music Server, (https://picoreplayer.org/)  
+- **"OpenVPN":** Software that creates a secure, encrypted tunnel to your home or office network from anywhere in the world.  
+- **"samba":** Software that connects Linux and Windows so they can easily share folders and printers.  
+- **"rsync":** A software tool that efficiently copies and synchronizes files between folders or computers by only moving the changes.  
 
 ### The motivation for the project:
 I have a good friend who has Dementia at a young age (50 years old), and he loves music like me.  
