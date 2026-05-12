@@ -36,10 +36,18 @@ Principle diagram.
 * **Remote System:** Hardware / Software    
 <u>LMS/Player:</u> Raspberry Pi 4B+ / piCorePlayer 10.0.0 – 64 bit  
 
-
+I det eftefølgende er der beskrevet..........................
 
 # Open VPN (remote pCP contol)
 ## Home System - Setup:   
-* **Synology NAS:** Rsync
+* **NAS:** OpenVPn
 
 * **Synology NAS:** Rsync
+
+## Projektstruktur:
+* [pCP, Install & Setup on Raspberry Pi.](rpi/rpi_pcp.md)
+* [OpenVPN, NAS.](software/android_sync_app/android_sync_app.md)
+* [OpenVPN, Router](software/rpi_messure/rpi_messure.md)
+* [OpenVPN, Raspberry Pi](software/rpi_source_original/rpi_source_original.md)
+* [Rsync, NAS](hardware/hardware.md)
+* [Rsync, Raspberry Pi](dokumentation/manual.md)

@@ -1,5 +1,5 @@
-# Software - DualEmSync (Android Sync-App.) 
-[Retur til README](../../README.md)
+# Raspberry Pi - pCP (PiCorePlayer) 
+[Retur til README](../README.md)
 
 ## Beskrivelse:
 Setup, ATV trækker en Slæde der opsamler data om undergrunden, på slæden er der en Raspberry Pi (RPi) som opsamler data og gemmer disse lokalt, 
