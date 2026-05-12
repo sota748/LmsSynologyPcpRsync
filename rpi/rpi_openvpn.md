@@ -1,2 +1,2 @@
 # OpenVPN - Raspberry Pi
-[Retur til README](../README.md)
+[Return to README](../README.md)

@@ -1,17 +1,16 @@
 # pCP (PiCorePlayer) - Raspberry Pi 
-[Retur til README](../README.md)
+[Return to README](../README.md)
 
 ## Install SD-Card:
 Follow the instructions in the link below  
 [Install pCP SD-Card](https://docs.picoreplayer.org/getting-started/)
-
-Once the pCP web interface is ready, follow the instructions below
+After "Step 3 - Boot piCorePlayer", follow the instructions below
 
 ## pCP webinterface, setup pages (IP: xxx.xxx.xxx.xxx):
-PiCorePlayer is installed as both Player and Server
+PiCorePlayer is used as both Player and Server
 
 ### Setup General:
-- pCP system password = xxxxxx (safe password, I use the same on all remote pCP)
+- pCP system password = xxxxxx (safe password, I use the same on all remote pCP's)
 - Do you want to check for updates? = Yes
 - Set Hostname = pcpX (X = number)
 - Enable SSH = Yes
@@ -29,13 +28,13 @@ Install piCorePlayer extensions (Main Page -> Extensions -> main repository)
 - rsync.tcz
 
 ### Squeezelite Settings:
-Audio output device settings
+- Audio output device settings
 
 ### Wifi Settings:
-Wifi to mobile hotspot (only used for testing)
+- Wifi to mobile hotspot (only used for testing)
 
 ### Tweaks:
-?
+- Nothing
 
 ### Drives:
 - Mount USB Disk = /mnt/hd
@@ -51,14 +50,14 @@ Wifi to mobile hotspot (only used for testing)
 - Windows file browser = \\pcpX\hd
 
 ### Lyrion
-Install LMS
-Set Branch = Stable
-Start LMS
-Save LMS Server Cache and Preferences to Mounted Drive = USB Disk
-Move LMS Data
-BackUp + Reboot (Main Page)
+- Install LMS
+- Set Branch = Stable
+- Start LMS
+- Save LMS Server Cache and Preferences to Mounted Drive = USB Disk
+- Move LMS Data
+- BackUp + Reboot (Main Page)
 
-## LMS webinterface (xxx.xxx.xxx.xxx:9000):
+## LMS webinterface (IP: xxx.xxx.xxx.xxx:9000):
 
 ### Lyrion Music Server
 Start first time
