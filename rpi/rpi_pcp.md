@@ -2,7 +2,7 @@
 [Return to README](../README.md)
 
 ## Install SD-Card:
-Follow the instructions in the link below  
+Follow the instructions in the link below (rigth click and "Open in a new Tap/Window")  
 [Install pCP SD-Card](https://docs.picoreplayer.org/getting-started/)
 After "Step 3 - Boot piCorePlayer", follow the instructions below
 
