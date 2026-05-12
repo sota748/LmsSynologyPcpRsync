@@ -1,14 +1,18 @@
 # LmsSynologyPcpRsync - ReadMe
 
 ## Installation description:
+The installation description is located here at the top so it is easier to jump between the different pages.
 * [pCP, Install & Setup on Raspberry Pi.](rpi/rpi_pcp.md)
 * [OpenVPN, NAS.](nas/nas_openvpn.md)
-* [OpenVPN, Router](nas/router_openvpn.md)
+* [OpenVPN, Router](router/router_openvpn.md)
 * [OpenVPN, Raspberry Pi](rpi/rpi_openvpn.md)
 * [Rsync, NAS](nas/nas_rsync.md)
 * [Rsync, Raspberry Pi](rpi/rpi_rsync.md)
 
-## Glossary  
+
+## General description of the project.
+Should be read before starting the installation itself
+### Glossary  
 - <u>LMS (Lyrion Media Server)</u>: A music server that streams your entire local music library and online radio to multiple players throughout your home, (https://lyrion.org/)  
 - <u>NAS</u>: A dedicated storage device connected to your network that lets multiple users store and access files from any computer. Synology NAS (https://www.synology.com/en-global)  
 - <u>Docker</u>: A tool that packages an application and everything it needs into a single container, so it runs perfectly on any computer (and NAS)  
@@ -17,7 +21,7 @@
 - <u>"samba"</u>: Software that connects Linux and Windows so they can easily share folders and printers.  
 - <u>"rsync"</u>: A software tool that efficiently copies and synchronizes files between folders or computers by only moving the changes.  
 
-## The motivation for the project:
+### The motivation for the project:
 I have a good friend who has Dementia at a young age (50 years old), and he loves music like me.  
 He has problems operating, among other things, the CD player, so I have made him a pCP player, it is operated by him (with help from his wife).  
 
@@ -33,7 +37,7 @@ So I decided to make an automatic update of the pCP USB-HD, so that it is always
 
 The whole setup have currently been running with 2-3 remote pCPs for over a year now without any problems, so I think it can be called a stable system.​
 
-## System Description:
+### System Description:
 Principle diagram.  
 ![principlediagram](jpg/lms_synology_pcp_rsync_principle_diagram.jpg)
 
@@ -44,11 +48,3 @@ Principle diagram.
 
 * **Remote System:** Hardware / Software    
 <u>LMS/Player:</u> Raspberry Pi 4B+ / piCorePlayer 10.0.0 – 64 bit  
-
-I det eftefølgende er der beskrevet..........................
-
-# Open VPN (remote pCP contol)
-## Home System - Setup:   
-* **NAS:** OpenVPn
-
-* **Synology NAS:** Rsync

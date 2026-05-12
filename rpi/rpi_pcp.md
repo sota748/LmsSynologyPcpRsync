@@ -1,4 +1,4 @@
-# Raspberry Pi - pCP (PiCorePlayer) 
+# pCP (PiCorePlayer) - Raspberry Pi 
 [Retur til README](../README.md)
 
 ## Install SD-Card:
