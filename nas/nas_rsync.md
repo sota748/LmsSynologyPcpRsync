@@ -76,4 +76,9 @@ Control Panel -> Terminal and SNMP -> Terminal -> uncheck "Enable SSH service" -
 Control Panel -> Terminal and SNMP -> Terminal -> check "Enable SSH service" -> Apply  
 ![Step 2c](nas_rsync_2c_activate.png)  
   
-## Step 3: Copy RPi to NAS:
+## Step 3: Copy Key from RPi to NAS:  
+
+> * **Step 3a: "RPi/pcpX: Copy Key"**  Generate Key on RPi/pcpX,  
+```text
+ssh-keygen -t rsa -b 4096   # create a 4096 bit key
+```
