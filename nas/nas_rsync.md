@@ -9,7 +9,11 @@ To understand how rsync works on a Synology NAS, I have found good information a
 
 ## Step 1: User:
 I have created a new user "rsync" on the NAS which is only used for rsync.  
-The "rsync" user belongs to the Admin group (only Admins can ssh)  
-Control Panel -> User -> rsync -> User Groups:
-verify "users" and "Administrators" are checked (only Admins can ssh)  
-![Step 1](nas_rsync_1_user.png)  
+The "rsync" user belongs to the Admin group (only Admins can SSH)  
+Give the "rsync" user the desired Permissions
+Step 1a: Create NAS user (Control Panel -> User -> Create)   
+![Step 1a](nas_rsync_1a_user.png)  
+Step 1b: Set User Groups (Control Panel -> User -> rsync -> User Groups)
+![Step 1b](nas_rsync_1b_user.png)
+Step 1c: Set User Permissions (Control Panel -> User -> rsync -> Permissions)
+![Step 1c](nas_rsync_1c_user.png)
