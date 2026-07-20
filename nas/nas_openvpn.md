@@ -2,7 +2,7 @@
 [Return to README](../README.md)
 
 ## Step 1: DDNS:  
-- DDNS is  service that automatically updates your domain name to point to your home network, even when your internet provider changes your IP address.  
+- DDNS is a service that automatically updates your domain name to point to your home network, even when your internet provider changes your IP address.  
 
 Step 1:  
 ![Step 1](nas_openvpn_1_ddns.png)  
