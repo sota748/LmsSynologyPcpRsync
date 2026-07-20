@@ -22,5 +22,35 @@ Step 1c: Set User Permissions (Control Panel -> User -> rsync -> Permissions)
 ![Step 1c](nas_rsync_1c_user.png)  
 
 ## Step 2: Putty, NAS:
+> * **Step 2a: sshd_config** In Vim, edit the /etc/ssh/sshd_config file.
+```text
+sudo vim /etc/ssh/sshd_config
+```
+> * **Step 2b: sshd_config** In Vim, make these changes.
+```text
+remove "#" before "PubkeyAuthentication yes"
+remove "#" before "AuthorizedKeysFile .ssh/authorized_keys"
+remove "#" before "ChallengeResponseAuthentication no"
+```
+> * **Step 2c: sshd_config** In Vim, save the file.
+```text
+:wq!
+```
+
+
+create folder ".ssh":  mkdir .ssh
+chmod 700 .ssh # changes .ssh directory permission to drwx------ 
+check = ls -al
+create file in the .ssh folder "authorized_keys":  
+touch .ssh/authorized_keys
+chmod 600 .ssh/authorized_keys # changes to -rw-------
+pwd = rsync's user home directory (/var/services/homes/rsync)
+check = ls -al
+cd /var/services/homes 
+sudo chmod 700  rsync # changes rsync's home permission to drwx------
+check = ls -al
+activate
+Control Panel -> Terminal and SNMP -> Terminal -> uncheck "Enable SSH" -> Apply
+Control Panel -> Terminal and SNMP -> Terminal -> check "Enable SSH" -> Apply
 
 ## Step 3: Putty, Copy RPi to NAS:
