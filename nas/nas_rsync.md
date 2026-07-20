@@ -12,17 +12,17 @@ I have created a new user "rsync" on the NAS which is only used for rsync.
 The "rsync" user belongs to the Admin group (only Admins can SSH)  
 Give the "rsync" user the desired Permissions  
   
-* **Step 1a: Create NAS user**  (Control Panel -> User -> Create)   
+> * **Step 1a: Create NAS user**  (Control Panel -> User -> Create)   
 ![Step 1a](nas_rsync_1a_user.png)  
   
-* **Step 1b: Set User Groups** (Control Panel -> User -> rsync -> User Groups)
+> * **Step 1b: Set User Groups** (Control Panel -> User -> rsync -> User Groups)
 ![Step 1b](nas_rsync_1b_user.png)  
   
-* **Step 1c: Set User Permissions** (Control Panel -> User -> rsync -> Permissions)  
+> * **Step 1c: Set User Permissions** (Control Panel -> User -> rsync -> Permissions)  
 ![Step 1c](nas_rsync_1c_user.png)  
 
 ## Step 2: NAS changes (SSH):
-* **Step 2x: Connect to the NAS with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
+> * **Step 2: Connect to the NAS with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
 ![Step 2](nas_rsync_2_ssh.png)  
 
 > * **Step 2a: "file: sshd_config"**  With Vim, edit the /etc/ssh/sshd_config file
@@ -58,34 +58,20 @@ touch .ssh/authorized_keys
 chmod 600 .ssh/authorized_keys
 ```
   
-> * **Step 2d: "folder: rsync homes folder"**  Print rsync home folder 
+> * **Step 2d: "folder: rsync homes folder"** Print rsync home folder (Print Working Directory) 
 ```text
 pwd
 ```
-> * **Step 2d: "folder: rsync homes folder"**   Go to homes folder 
+> * **Step 2d: "folder: rsync homes folder"**  Go to homes folder 
 ```text
 cd /var/services/homes
 ```
-> * **Step 2d: "folder: rsync homes folder"**   Change folder permission to "drwx------" 
+> * **Step 2d: "folder: rsync homes folder"**  Change folder permission to "drwx------" 
 ```text
 sudo chmod 700  rsync
 ```
-
-
-
-
-create folder ".ssh":  mkdir .ssh
-chmod 700 .ssh # changes .ssh directory permission to drwx------ 
-check = ls -al
-create file in the .ssh folder "authorized_keys":  
-touch .ssh/authorized_keys
-chmod 600 .ssh/authorized_keys # changes to -rw-------
-pwd = rsync's user home directory (/var/services/homes/rsync)
-check = ls -al
-cd /var/services/homes 
-sudo chmod 700  rsync # changes rsync's home permission to drwx------
-check = ls -al
-activate
+  
+> * **Step 2c: "activate"**  Change folder permission to "drwx------" 
 Control Panel -> Terminal and SNMP -> Terminal -> uncheck "Enable SSH" -> Apply
 Control Panel -> Terminal and SNMP -> Terminal -> check "Enable SSH" -> Apply
 
