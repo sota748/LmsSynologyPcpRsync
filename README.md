@@ -1,7 +1,8 @@
 # LmsSynologyPcpRsync - ReadMe
 
 ## Installation description:
-The installation description is located here at the top so it is easier to jump between the different pages.
+The installation description is located here at the top so it is easier to jump between the different pages.  
+But first read the following, it helps to understand the description on the different pages.  
 * [pCP, Install & Setup on Raspberry Pi.](rpi/rpi_pcp.md)
 * [OpenVPN, NAS.](nas/nas_openvpn.md)
 * [OpenVPN, Router](router/router_openvpn.md)
