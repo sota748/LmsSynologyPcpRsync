@@ -21,31 +21,39 @@ Step 1b: Set User Groups (Control Panel -> User -> rsync -> User Groups)
 Step 1c: Set User Permissions (Control Panel -> User -> rsync -> Permissions)  
 ![Step 1c](nas_rsync_1c_user.png)  
 
-## Step 2: NAS changes (SSH with Putty):
-Step 2x: Connect to the NAS with a ssh client (I use PuTTY) and login in with the rsync user creeatede in Step 1.  
+## Step 2: NAS changes (SSH):
+Step 2x: Connect to the NAS with a ssh client (I use PuTTY) and login in with the rsync user creeated in Step 1.  
 ![Step 2](nas_rsync_2_ssh.png)  
 
-> * **Step 2a: "sshd_config"**  With Vim, edit the /etc/ssh/sshd_config file
+> * **Step 2a: "file: sshd_config"**  With Vim, edit the /etc/ssh/sshd_config file
 ```text
 sudo vim /etc/ssh/sshd_config
 ```
-> * **Step 2a: "sshd_config"**  In Vim, make these changes
+> * **Step 2a: "file: sshd_config"**  In Vim, make these changes
 ```text
 remove "#" before "PubkeyAuthentication yes"
 remove "#" before "AuthorizedKeysFile .ssh/authorized_keys"
 remove "#" before "ChallengeResponseAuthentication no"
 ```
-> * **Step 2a: "sshd_config"**  In Vim, save the file
+> * **Step 2a: "file: sshd_config"**  In Vim, save the file
 ```text
 :wq!
 ```
-> * **Step 2b: ".ssh"**  Create folder (in user rsync´s home folder)
+> * **Step 2b: "folder: .ssh"**  Create folder (in user rsync´s home folder)
 ```text
 mkdir .ssh
 ```
-> * **Step 2b: ".ssh"**  Change .ssh directory permission to "drwx------"
+> * **Step 2b: "folder: .ssh"**  Change folder permission to "drwx------"
 ```text
 chmod 700 .ssh
+```
+> * **Step 2c: "file: authorized_keys"**  Create file in the .ssh folder 
+```text
+touch .ssh/authorized_keys
+```
+> * **Step 2c: "file: authorized_keys"**  Change file permission to "-rw-------" 
+```text
+chmod 600 .ssh/authorized_keys
 ```
 
 
