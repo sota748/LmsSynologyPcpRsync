@@ -12,17 +12,17 @@ I have created a new user "rsync" on the NAS which is only used for rsync.
 The "rsync" user belongs to the Admin group (only Admins can SSH)  
 Give the "rsync" user the desired Permissions  
   
-> * **Step 1a: Create NAS user**  (Control Panel -> User -> Create)   
+* **Step 1a: Create NAS user**  (Control Panel -> User -> Create)   
 ![Step 1a](nas_rsync_1a_user.png)  
   
-> * **Step 1b: Set User Groups** (Control Panel -> User -> rsync -> User Groups)
+* **Step 1b: Set User Groups** (Control Panel -> User -> rsync -> User Groups)
 ![Step 1b](nas_rsync_1b_user.png)  
   
-> * **Step 1c: Set User Permissions** (Control Panel -> User -> rsync -> Permissions)  
+* **Step 1c: Set User Permissions** (Control Panel -> User -> rsync -> Permissions)  
 ![Step 1c](nas_rsync_1c_user.png)  
 
 ## Step 2: NAS changes (SSH):
-> * **Step 2: Connect to the NAS with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
+* **Step 2: Connect to the NAS with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
 ![Step 2](nas_rsync_2_ssh.png)  
 
 > * **Step 2a: "file: sshd_config"**  With Vim, edit the /etc/ssh/sshd_config file
@@ -71,8 +71,9 @@ cd /var/services/homes
 sudo chmod 700  rsync
 ```
   
-> * **Step 2c: "activate"**  Change folder permission to "drwx------" 
-Control Panel -> Terminal and SNMP -> Terminal -> uncheck "Enable SSH" -> Apply
-Control Panel -> Terminal and SNMP -> Terminal -> check "Enable SSH" -> Apply
-
-## Step 3: Putty, Copy RPi to NAS:
+* **Step 2c: "activate"**  Activate the changes  
+Control Panel -> Terminal and SNMP -> Terminal -> uncheck "Enable SSH service" -> Apply  
+Control Panel -> Terminal and SNMP -> Terminal -> check "Enable SSH service" -> Apply  
+![Step 2c](nas_rsync_2c_activate.png)  
+  
+## Step 3: Copy RPi to NAS:
