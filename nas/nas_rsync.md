@@ -12,13 +12,13 @@ I have created a new user "rsync" on the NAS which is only used for rsync.
 The "rsync" user belongs to the Admin group (only Admins can SSH)  
 Give the "rsync" user the desired Permissions  
   
-Step 1a: Create NAS user (Control Panel -> User -> Create)   
+* **Step 1a: Create NAS user (Control Panel -> User -> Create)**   
 ![Step 1a](nas_rsync_1a_user.png)  
   
-Step 1b: Set User Groups (Control Panel -> User -> rsync -> User Groups)
+* **Step 1b: Set User Groups (Control Panel -> User -> rsync -> User Groups)**
 ![Step 1b](nas_rsync_1b_user.png)  
   
-Step 1c: Set User Permissions (Control Panel -> User -> rsync -> Permissions)  
+* **Step 1c: Set User Permissions (Control Panel -> User -> rsync -> Permissions)**  
 ![Step 1c](nas_rsync_1c_user.png)  
 
 ## Step 2: NAS changes (SSH):
@@ -39,7 +39,8 @@ remove "#" before "ChallengeResponseAuthentication no"
 ```text
 :wq!
 ```
-> * **Step 2b: "folder: .ssh"**  Create folder (in user rsync´s home folder)
+  
+> * **Step 2b: "folder: .ssh"**  Create folder (in rsync user home folder)
 ```text
 mkdir .ssh
 ```
@@ -47,6 +48,7 @@ mkdir .ssh
 ```text
 chmod 700 .ssh
 ```
+  
 > * **Step 2c: "file: authorized_keys"**  Create file in the .ssh folder 
 ```text
 touch .ssh/authorized_keys
@@ -55,6 +57,20 @@ touch .ssh/authorized_keys
 ```text
 chmod 600 .ssh/authorized_keys
 ```
+  
+> * **Step 2d: "folder: rsync homes folder"**  Print rsync home folder 
+```text
+pwd
+```
+> * **Step 2d: "folder: rsync homes folder"**   Go to homes folder 
+```text
+cd /var/services/homes
+```
+> * **Step 2d: "folder: rsync homes folder"**   Change folder permission to "drwx------" 
+```text
+sudo chmod 700  rsync
+```
+
 
 
 
