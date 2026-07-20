@@ -7,7 +7,7 @@ To understand how rsync works on a Synology NAS, I have found good information a
 - **YouTube:** Enable Key Based SSH Authentication For Synology Servers, https://www.youtube.com/watch?v=XN9SuzV08Ew  
 - **YouTube:** Use a RaspberryPi as an Offsite / Remote Backup for your Critical Data!, https://www.youtube.com/watch?v=ffx4HhNLqfI  
 
-## Step 1: DSM 7.x, User:
+## Step 1: NAS rsync User (DSM 7.x):
 I have created a new user "rsync" on the NAS which is only used for rsync.  
 The "rsync" user belongs to the Admin group (only Admins can SSH)  
 Give the "rsync" user the desired Permissions  
@@ -21,7 +21,10 @@ Step 1b: Set User Groups (Control Panel -> User -> rsync -> User Groups)
 Step 1c: Set User Permissions (Control Panel -> User -> rsync -> Permissions)  
 ![Step 1c](nas_rsync_1c_user.png)  
 
-## Step 2: Putty, NAS:
+## Step 2: NAS changes (SSH with Putty):
+Step 2x: Connect to the NAS with a ssh client (I use PuTTY) and login in with the rsync user creeatede in Step 1.  
+![Step 2](nas_rsync_2_ssh.png)  
+
 > * **Step 2a: "sshd_config"**  With Vim, edit the /etc/ssh/sshd_config file
 ```text
 sudo vim /etc/ssh/sshd_config
@@ -36,7 +39,7 @@ remove "#" before "ChallengeResponseAuthentication no"
 ```text
 :wq!
 ```
-> * **Step 2b: ".ssh"**  Create folder
+> * **Step 2b: ".ssh"**  Create folder (in user rsync´s home folder)
 ```text
 mkdir .ssh
 ```
