@@ -22,20 +22,29 @@ Step 1c: Set User Permissions (Control Panel -> User -> rsync -> Permissions)
 ![Step 1c](nas_rsync_1c_user.png)  
 
 ## Step 2: Putty, NAS:
-> * **Step 2a: sshd_config** In Vim, edit the /etc/ssh/sshd_config file.
+> * **Step 2a: "sshd_config"**  With Vim, edit the /etc/ssh/sshd_config file
 ```text
 sudo vim /etc/ssh/sshd_config
 ```
-> * **Step 2b: sshd_config** In Vim, make these changes.
+> * **Step 2a: "sshd_config"**  In Vim, make these changes
 ```text
 remove "#" before "PubkeyAuthentication yes"
 remove "#" before "AuthorizedKeysFile .ssh/authorized_keys"
 remove "#" before "ChallengeResponseAuthentication no"
 ```
-> * **Step 2c: sshd_config** In Vim, save the file.
+> * **Step 2a: "sshd_config"**  In Vim, save the file
 ```text
 :wq!
 ```
+> * **Step 2b: ".ssh"**  Create folder
+```text
+mkdir .ssh
+```
+> * **Step 2b: ".ssh"**  Change .ssh directory permission to "drwx------"
+```text
+chmod 700 .ssh
+```
+
 
 
 create folder ".ssh":  mkdir .ssh
