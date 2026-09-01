@@ -64,11 +64,11 @@ Install piCorePlayer extensions (Main Page -> Extensions -> main repository)
 
 ### Lyrion Music Server
 Start first time  
-> * **Basic Settings**  Lyrion Music Server  
+**Basic Settings**  Lyrion Music Server  
 - Media Library Name: pcpX-lms  
 - Set & Scan all Media Folders (7 pcs.)  
 - Set Playlists Folder  
-> * **Plugins**  Lyrion Music Server  
+**Plugins**  Lyrion Music Server  
 - Additional Browse Modes  
 - Don't Stop The Music  
 - Drag & drop music files to play  
