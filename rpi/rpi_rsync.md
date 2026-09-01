@@ -24,13 +24,13 @@ If everything is ok, backup RPi.
 pcp bu
 ```
 
-> * **Step 1b: RSYNCstartscript.sh**  Create file + Contens + Make file executable + Backup  
-> * ***RSYNCstartscript.sh***  Create file  
-```text
-sudo nano RSYNCstartscript.sh
-```
+* **Step 1b: RSYNCstartscript.sh**  Create file + Contens + Make file executable + Backup  
+>* ***RSYNCstartscript.sh***  Create file  
+>```text
+>sudo nano RSYNCstartscript.sh
+>```
 
-> * ***RSYNCstartscript.sh***  Contents  
+>* ***RSYNCstartscript.sh***  Contents  
 Replace <remote_source> with your own nas connection string  
 Replace <nas_ip> with your own nas ip  
 ```text
