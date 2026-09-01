@@ -63,31 +63,31 @@ Install piCorePlayer extensions (Main Page -> Extensions -> main repository)
 ## LMS webinterface (IP: xxx.xxx.xxx.xxx:9000):
 
 ### Lyrion Music Server
-Start first time
-Basic Settings
-- Media Library Name: pcpX-lms
-- set /mnt/hd/Music/Children
-Set & Scan all Music drives + playlist folder (7 pcs.)
-Plugins
-- Additional Browse Modes
-- Don't Stop The Music
-- Drag & drop music files to play
-- Find Artwork for Radio
-- Full text search
-- Material Skin
-- Music and Artist Information
-- Online Music Library
-- Podcasts
-- Presets Editor
-- Radio
-- Radio Now Playing
-- RadioNet
-- Random Mix
-- Remote Music Libraries
-- Report Analytics Data
-- Song Scanner
-- Sounds & Effects
-- Visual Statistics
+Start first time  
+Basic Settings  
+- Media Library Name: pcpX-lms  
+- Set & Scan all Media Folders (7 pcs.)  
+- Set Playlists Folder  
+Plugins  
+- Additional Browse Modes  
+- Don't Stop The Music  
+- Drag & drop music files to play  
+- Find Artwork for Radio  
+- Full text search  
+- Material Skin  
+- Music and Artist Information  
+- Online Music Library  
+- Podcasts  
+- Presets Editor  
+- Radio  
+- Radio Now Playing  
+- RadioNet  
+- Random Mix  
+- Remote Music Libraries  
+- Report Analytics Data  
+- Song Scanner  
+- Sounds & Effects  
+- Visual Statistics  
 Behavior
 Release types for Albums = Group an artist list by release type
 Plugins – Material skin
