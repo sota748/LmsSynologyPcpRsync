@@ -24,16 +24,15 @@ If everything is ok, backup RPi.
 pcp bu
 ```
 
-> * **Step 1b: RSYNCstartscript.sh**  Create file + Contens + Make file executable + Backup
-> * ***RSYNCstartscript.sh***  Create file 
+> * **Step 1b: RSYNCstartscript.sh**  Create file + Contens + Make file executable + Backup  
+> * ***RSYNCstartscript.sh***  Create file  
 ```text
 sudo nano RSYNCstartscript.sh
 ```
 
-> * ***RSYNCstartscript.sh***  Contents 
-Replace <remote_source> with your own nas connection string
-Replace <nas_ip> with your own nas ip
-
+> * ***RSYNCstartscript.sh***  Contents  
+Replace <remote_source> with your own nas connection string  
+Replace <nas_ip> with your own nas ip  
 ```text
 #!/bin/sh
 export HOME="/home/tc"
@@ -120,25 +119,24 @@ awk '
 mv "$TMPLOG" "$LOG"
 rm -f "$RSYNC_TMP_OUTPUT"
 ```
-> * ***RSYNCstartscript.sh***  Make file executable 
+> * ***RSYNCstartscript.sh***  Make file executable  
 ```text
 sudo chmod +x /home/tc/ RSYNCstartscript.sh
 ```
-> * ***RSYNCstartscript.sh***  Backup 
+> * ***RSYNCstartscript.sh***  Backup  
 ```text
 pcp bu
 ```
-
-> * **Step 1c: RSYNClog.txt**  Create file + Backup + Example of Content
-> * ***RSYNClog.txt***  Create file 
+> * **Step 1c: RSYNClog.txt**  Create file + Backup + Example of Content  
+> * ***RSYNClog.txt***  Create file  
 ```text
 touch RSYNClog.txt
 ```
-> * ***SYNClog.txt***  Backup 
+> * ***SYNClog.txt***  Backup  
 ```text
 pcp bu
 ```
-> * ***RSYNClog.txt***  Example of Content  
+> * ***RSYNClog.txt***  Example of Content    
 ```text
 tc@pcp3:~$ cat RSYNClog.txt
 [START] Tue Aug 11 03:03:00 CEST 2026
@@ -171,7 +169,7 @@ tc@pcp3:~$ cat RSYNClog.txt
 [FINISH] Mon Aug 17 03:03:55 CEST 2026
 ```
 
-> * **home dir**  Content 
+> * **home dir**  Content  
 ```text
 tc@pcp4:~$ ls -la
 total 32
@@ -191,5 +189,5 @@ drwxr-s---    3 tc       staff           60 Jan  6  2017 .local/
 tc@pcp4:~$
 ```
 
-## Step 2: rsync Key:
+## Step 2: rsync Key:  
 See................
