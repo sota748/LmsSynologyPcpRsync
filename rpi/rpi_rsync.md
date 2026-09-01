@@ -5,29 +5,29 @@
 ## Step 1: RPI changes (SSH):
 * **Step 1a: Connect to the RPi with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
 
-* **Step 1b: User "tc" must own all folders and files in /mnt/hd/Music**  for Rsync to be able to update the files' timestamps without any problems
-Grants full ownership of the Music folder and all its contents to the user 'tc' and group 'staff'.
+* **Step 1b: User "tc" must own all folders and files in /mnt/hd/Music**  for Rsync to be able to update the files' timestamps  
+>Grants full ownership of the Music folder and all its contents to the user 'tc' and group 'staff'.
 ```text
 sudo chown -R tc:staff /mnt/hd/Music
 ```
-Opens up the Music folder and all its contents completely, allowing anyone or any system service to read, write, or delete files.
+>Opens up the Music folder and all its contents completely, allowing anyone or any system service to read, write, or delete files.
 ```text
 sudo chmod -R 777 /mnt/hd/Music
 ```
-Check, result = "drwxrwxrwx   10 tc       staff         4096 Aug 29 10:20 /mnt/hd/Music/"
+>Check, (result = "drwxrwxrwx   10 tc       staff         4096 Aug 29 10:20 /mnt/hd/Music/")
 ```text
 sudo chown -R tc:staff /mnt/hd/Music
 ```
-If everything is ok, backup RPi.
+>Backup
 ```text
 pcp bu
 ```
 * **Step 1c: RSYNCstartscript.sh**  Create file + Contens + Make file executable + Backup  
->* ***RSYNCstartscript.sh*** -> Create file  
+>Create file  
 ```text
 sudo nano RSYNCstartscript.sh
 ```
->* ***RSYNCstartscript.sh*** -> Contents  
+>Contents  
 Replace <remote_source> with your own nas connection string  
 Replace <nas_ip> with your own nas ip  
 ```text
@@ -116,11 +116,11 @@ awk '
 mv "$TMPLOG" "$LOG"
 rm -f "$RSYNC_TMP_OUTPUT"
 ```
->* ***RSYNCstartscript.sh*** -> Make file executable  
+>Make file executable  
 ```text
 sudo chmod +x /home/tc/ RSYNCstartscript.sh
 ```
->* ***RSYNCstartscript.sh*** -> Backup  
+>Backup  
 ```text
 pcp bu
 ```
