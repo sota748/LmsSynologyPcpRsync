@@ -76,12 +76,12 @@ Control Panel -> Terminal and SNMP -> Terminal -> uncheck "Enable SSH service" -
 Control Panel -> Terminal and SNMP -> Terminal -> check "Enable SSH service" -> Apply  
 ![Step 2c](nas_rsync_2c_activate.png)  
   
-## Step 3: Copy Key from RPi (pcpX) to NAS:  
+## Step 3: Copy Key from the RPi to the NAS:  
 In this step, an ssh key is generate and copied from Raspberry Pi to the NAS.  
 The easiest way to do it is to open 2 SSH clients at the same time, RPi in one and NAS in the other.  
 A key must be copied for each RPi/pcpX that will use the rsync function.  
 
-* **Step 3: Connect to the NAS the RPI with each their own ssh client**  NAS on the left and RPi on the right.  
+* **Step 3: Connect to the NAS & the RPI with each their own ssh client**  NAS on the left and RPi on the right.  
 ![Step 3](nas_rsync_3_key.png) 
 
 > * **Step 3a: "RPi (pcpX): Generate Key"**  Generate Key on RPi, Command creates a 4096 bit key  

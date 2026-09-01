@@ -29,11 +29,11 @@ He has problems operating, among other things, the CD player, so I have made him
 So that I can help from home, I have installed OpenVPN on it, this means that I from home can operate:  
 - LMS webinterface (IP: xxx.xxx.xxx.xxx:9000)  
 - pCP webinterface, setup pages (IP: xxx.xxx.xxx.xxx)  
-- Files on the USB-HB, with Samba  
+- Files on the USB-HDD, with Samba  
 - SSH with PuTTY
 
 But it was/is a hassle to keep the pCP USB-HD updated with the changes I made to the Music library on the NAS.  
-So I decided to make an automatic update of the pCP USB-HD, so that it is always a mirror of my NAS library.  
+So I decided to make an automatic update of the pCP USB-HDD, so that it is always a mirror of my NAS library.  
 - To achieve this I have used rsync.  
 
 The whole setup have currently been running with 2-3 remote pCPs for over a year now without any problems, so I think it can be called a stable system.​
