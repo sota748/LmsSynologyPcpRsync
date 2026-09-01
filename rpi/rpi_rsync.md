@@ -3,10 +3,9 @@
 
 
 ## Step 1: RPI changes (SSH):
-* **Step 1: Connect to the RPi with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
-![Step 2](nas_rsync_2_ssh.png)  
+* **Step 1a: Connect to the RPi with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
 
-> * **Step 1a: User "tc" must own all folders and files in /mnt/hd/Music**  for Rsync to be able to update the files' timestamps without any problems
+* **Step 1b: User "tc" must own all folders and files in /mnt/hd/Music**  for Rsync to be able to update the files' timestamps without any problems
 Grants full ownership of the Music folder and all its contents to the user 'tc' and group 'staff'.
 ```text
 sudo chown -R tc:staff /mnt/hd/Music
@@ -23,14 +22,12 @@ If everything is ok, backup RPi.
 ```text
 pcp bu
 ```
-
-* **Step 1b: RSYNCstartscript.sh**  Create file + Contens + Make file executable + Backup  
->* ***RSYNCstartscript.sh***  Create file  
->```text
->sudo nano RSYNCstartscript.sh
->```
-
->* ***RSYNCstartscript.sh***  Contents  
+* **Step 1c: RSYNCstartscript.sh**  Create file + Contens + Make file executable + Backup  
+>* ***RSYNCstartscript.sh*** -> Create file  
+```text
+sudo nano RSYNCstartscript.sh
+```
+>* ***RSYNCstartscript.sh*** -> Contents  
 Replace <remote_source> with your own nas connection string  
 Replace <nas_ip> with your own nas ip  
 ```text
@@ -119,24 +116,24 @@ awk '
 mv "$TMPLOG" "$LOG"
 rm -f "$RSYNC_TMP_OUTPUT"
 ```
-> * ***RSYNCstartscript.sh***  Make file executable  
+>* ***RSYNCstartscript.sh*** -> Make file executable  
 ```text
 sudo chmod +x /home/tc/ RSYNCstartscript.sh
 ```
-> * ***RSYNCstartscript.sh***  Backup  
+>* ***RSYNCstartscript.sh*** -> Backup  
 ```text
 pcp bu
 ```
-> * **Step 1c: RSYNClog.txt**  Create file + Backup + Example of Content  
-> * ***RSYNClog.txt***  Create file  
+* **Step 1d: RSYNClog.txt**  Create file + Backup + Example of Content  
+>* ***RSYNClog.txt*** -> Create file  
 ```text
 touch RSYNClog.txt
 ```
-> * ***SYNClog.txt***  Backup  
+>* ***SYNClog.txt*** -> Backup  
 ```text
 pcp bu
 ```
-> * ***RSYNClog.txt***  Example of Content    
+>* ***RSYNClog.txt*** -> Example of Content (after )    
 ```text
 tc@pcp3:~$ cat RSYNClog.txt
 [START] Tue Aug 11 03:03:00 CEST 2026
@@ -169,7 +166,7 @@ tc@pcp3:~$ cat RSYNClog.txt
 [FINISH] Mon Aug 17 03:03:55 CEST 2026
 ```
 
-> * **home dir**  Content  
+* **home dir**  Content  
 ```text
 tc@pcp4:~$ ls -la
 total 32
