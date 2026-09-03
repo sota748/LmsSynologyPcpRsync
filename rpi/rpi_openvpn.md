@@ -1,18 +1,26 @@
 [Return to README](../README.md)  
 
 # OpenVPN - Raspberry Pi  
+The following files will be stored in directory /home/tc/  
 
-> * **VPN.conf**  ?????  
+## Step 1: RPI changes (SSH):  
+**Step 1a: Connect to the RPi with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
 
-Replace <ddns> with your own DDNS
-Replace <port> with your own DDNS
-Replace <nas_ip> with your own nas ip
+**Step 1b: VPN.conf**  Create file + Contens + Make file executable + Backup  
+>Create file  
+```text
+sudo nano VPN.conf
+```
+>Contents  
+Replace <DDNS> with your own DDNS
+Replace <PORT> with your own DDNS
+Replace <NAS_IP> with your own nas ip
 
 ```text
 dev tun
 tls-client
 
-remote <ddns>.synology.me <port>
+remote <DDNS>.synology.me <PORT>
 
 # The "float" tells OpenVPN to accept authenticated packets from any address,
 # not only the address which was specified in the --remote option.
@@ -37,8 +45,8 @@ remote <ddns>.synology.me <port>
 
 pull
 route-nopull
-route <nas_ip> 255.255.255.0
-#route <nas_ip> 255.255.255.0
+route <NAS_IP> 255.255.255.0
+#route <NAS_IP> 255.255.255.0
 
 # If you want to connect by Server's IPv6 address, you should use
 # "proto udp6" in UDP mode or "proto tcp6-client" in TCP mode
@@ -81,17 +89,17 @@ yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 tc@pcp3:~$
 ```
 
-> * **VPN.key**  ?????  
-Replace <user> with your own DDNS
-Replace <password> with your own DDNS
+* **VPN.key**  ?????  
+Replace <USER> with your own DDNS
+Replace <PASSWORD> with your own DDNS
 
 ```text
-<user>
-<password>
+<USER>
+<PASSWORD>
 ```
 
-> * **VPNstartscript.sh**  ?????  
-Replace <nas_ip> with your own nas ip
+* **VPNstartscript.sh**  ?????  
+Replace <NAS_IP> with your own nas ip
 
 ```text
 #!/bin/sh
@@ -104,7 +112,7 @@ let retries=0
 touch /home/tc/VPN_Retries                                                                                      # At startup create file
 touch /home/tc/VPN_Retry_Details.txt                                                                            # At startup create file
 
-Testhost=<nas_ip>                                                                                              # Set a host on the local (VPN server) LAN to ping to check whether VPN is up
+Testhost=<NAS_IP>                                                                                              # Set a host on the local (VPN server) LAN to ping to check whether VPN is up
 
 VPNTest() {
 
@@ -152,20 +160,20 @@ exit
 
 ```
 
-> * **VPN_Retries**  Example of Content  
+* **VPN_Retries**  Example of Content  
 ```text
 tc@pcp3:~$ cat VPN_Retries
 2
 ```
 
-> * **VPN_Retry_Details.txt**  Example of Content  
+* **VPN_Retry_Details.txt**  Example of Content  
 ```text
 tc@pcp3:~$ cat VPN_Retry_Details.txt
 14/07/2026 10:23:51 Retry  1
 11/08/2026 16:25:54 Retry  2
 ```
 
-> * **home dir**  Content  
+* **home dir**  Content  
 ```text
 tc@pcp3:~$ ls -la
 total 68

@@ -1,6 +1,7 @@
 [Return to README](../README.md)  
 
 # rsync - Raspberry Pi  
+The following files will be stored in directory /home/tc/  
 
 ## Step 1: RPI changes (SSH):  
 **Step 1a: Connect to the RPi with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
