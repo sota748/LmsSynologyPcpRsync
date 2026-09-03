@@ -6,7 +6,8 @@ Follow the instructions in the link below (rigth click and "Open in a new Tap/Wi
 [Install pCP SD-Card](https://docs.picoreplayer.org/getting-started/)
 After "Step 3 - Boot piCorePlayer", follow the instructions below
 
-## pCP webinterface, setup pages (IP: xxx.xxx.xxx.xxx):
+## pCP webinterface, setup pages:  
+- IP: xxx.xxx.xxx.xxx  
 pCP webinterface: Menu  
 ![pCP menu](rpi_pcp_1_menu.png)  
 
@@ -60,15 +61,18 @@ Install piCorePlayer extensions (Main Page -> Extensions -> main repository)
 - Move LMS Data
 - BackUp + Reboot (Main Page)
 
-## LMS webinterface (IP: xxx.xxx.xxx.xxx:9000):
+## LMS webinterface  
+- IP: xxx.xxx.xxx.xxx:9000  
 
-### Lyrion Music Server
+### Lyrion Music Settings -> Server
 Start first time  
-**Basic Settings**  Lyrion Music Server  
+
+**Basic Settings**  
 - Media Library Name: pcpX-lms  
 - Set & Scan all Media Folders (7 pcs.)  
 - Set Playlists Folder  
-**Plugins**  Lyrion Music Server  
+
+**Plugins**  
 - Additional Browse Modes  
 - Don't Stop The Music  
 - Drag & drop music files to play  
@@ -88,13 +92,21 @@ Start first time
 - Song Scanner  
 - Sounds & Effects  
 - Visual Statistics  
-Behavior
-Release types for Albums = Group an artist list by release type
-Plugins – Material skin
-Use comment for disc title = Contains only title
 
-### Lyrion Music Interface
-Color = For all players
-Mobile layout now-playing bar = Thick
-Font size = Large
-Home screen items = afhængig af hvem der er bruger
+**Interface**  
+- Time Format = hh:mm:ss (24h)  
+
+**My Music**  
+- Release types for Albums -> Try to recognize EPs and singles automatically when release type information is "album" or is missing = On
+- Release types for Albums -> Group an artist's lists by release type   
+
+**Plugins -> Material Skin**  
+- Use comment for disc title -> Contains only title  
+- Show comment in info view -> On
+
+### Lyrion Music Settings -> Interface
+- Color -> For all players  
+- Home screen items -> Scrollable lists = Explore + New Music + Randdom Releases + Recently Played + Radios  
+- Home screen items -> Categories = My Music + Radio + Favorites + Apps + Extras  
+- Home screen items -> Categories -> Browse modes = "Individual setup for each installation"  
+- Defaults -> Save as default = "Save the first time when the setup is done the current installation"  

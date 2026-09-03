@@ -124,16 +124,16 @@ sudo chmod +x /home/tc/ RSYNCstartscript.sh
 ```text
 pcp bu
 ```
-* **Step 1d: RSYNClog.txt**  Create file + Backup + Example of Content  
->* ***RSYNClog.txt*** -> Create file  
+* **Step 1d: RSYNClog.txt**  
+>Create file  
 ```text
 touch RSYNClog.txt
 ```
->* ***SYNClog.txt*** -> Backup  
+>Backup  
 ```text
 pcp bu
 ```
->* ***RSYNClog.txt*** -> Example of Content (after )    
+>Example of Content (after )    
 ```text
 tc@pcp3:~$ cat RSYNClog.txt
 [START] Tue Aug 11 03:03:00 CEST 2026
@@ -166,7 +166,8 @@ tc@pcp3:~$ cat RSYNClog.txt
 [FINISH] Mon Aug 17 03:03:55 CEST 2026
 ```
 
-* **home dir**  Content  
+* **Home dir**  
+>Content  
 ```text
 tc@pcp4:~$ ls -la
 total 32
