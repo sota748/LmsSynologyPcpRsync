@@ -1,14 +1,18 @@
-# OpenVPN - Raspberry Pi
-[Return to README](../README.md)
+[Return to README](../README.md)  
 
-
+# OpenVPN - Raspberry Pi  
 
 > * **VPN.conf**  ?????  
+
+Replace <ddns> with your own DDNS
+Replace <port> with your own DDNS
+Replace <nas_ip> with your own nas ip
+
 ```text
 dev tun
 tls-client
 
-remote ds723hg38.synology.me 7938
+remote <ddns>.synology.me <port>
 
 # The "float" tells OpenVPN to accept authenticated packets from any address,
 # not only the address which was specified in the --remote option.
@@ -33,8 +37,8 @@ remote ds723hg38.synology.me 7938
 
 pull
 route-nopull
-route 10.44.1.0 255.255.255.0
-#route 192.168.1.0 255.255.255.0
+route <nas_ip> 255.255.255.0
+#route <nas_ip> 255.255.255.0
 
 # If you want to connect by Server's IPv6 address, you should use
 # "proto udp6" in UDP mode or "proto tcp6-client" in TCP mode
@@ -78,12 +82,17 @@ tc@pcp3:~$
 ```
 
 > * **VPN.key**  ?????  
+Replace <user> with your own DDNS
+Replace <password> with your own DDNS
+
 ```text
 <user>
 <password>
 ```
 
 > * **VPNstartscript.sh**  ?????  
+Replace <nas_ip> with your own nas ip
+
 ```text
 #!/bin/sh
 
@@ -95,7 +104,7 @@ let retries=0
 touch /home/tc/VPN_Retries                                                                                      # At startup create file
 touch /home/tc/VPN_Retry_Details.txt                                                                            # At startup create file
 
-Testhost=10.44.1.1                                                                                              # Set a host on the local (VPN server) LAN to ping to check whether VPN is up
+Testhost=<nas_ip>                                                                                              # Set a host on the local (VPN server) LAN to ping to check whether VPN is up
 
 VPNTest() {
 

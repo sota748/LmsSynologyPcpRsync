@@ -1,8 +1,8 @@
-# rsync - Raspberry Pi
-[Return to README](../README.md)
+[Return to README](../README.md)  
 
+# rsync - Raspberry Pi  
 
-## Step 1: RPI changes (SSH):
+## Step 1: RPI changes (SSH):  
 * **Step 1a: Connect to the RPi with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
 
 * **Step 1b: User "tc" must own all folders and files in /mnt/hd/Music**  for Rsync to be able to update the files' timestamps  
