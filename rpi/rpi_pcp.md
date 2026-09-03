@@ -66,7 +66,7 @@ Start first time
 ## LMS webinterface  
 Link/IP: xxx.xxx.xxx.xxx:9000  
 LMS webinterface: Menu  
-![LMS menu](rpi_pcp_2_menu.jpg)  
+![LMS menu](rpi_pcp_2_menu.png)  
 
 ### LMS Settings -> Server  
 Start first time  
