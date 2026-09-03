@@ -12,9 +12,9 @@ The following files will be stored in directory /home/tc/
 sudo nano VPN.conf
 ```
 >Contents  
-Replace <DDNS> with your own DDNS
-Replace <PORT> with your own DDNS
-Replace <NAS_IP> with your own nas ip
+Replace <DDNS> with your own DDNS, created ......  
+Replace <PORT> with your own DDNS, created ......  
+Replace <NAS_IP> with your own nas ip, created ......  
 
 ```text
 dev tun
@@ -45,7 +45,9 @@ remote <DDNS>.synology.me <PORT>
 
 pull
 route-nopull
+# VPN (Remote)
 route <NAS_IP> 255.255.255.0
+# LAN (Local)
 #route <NAS_IP> 255.255.255.0
 
 # If you want to connect by Server's IPv6 address, you should use
@@ -53,7 +55,6 @@ route <NAS_IP> 255.255.255.0
 proto udp
 
 script-security 2
-
 
 comp-lzo
 
@@ -89,7 +90,7 @@ yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 tc@pcp3:~$
 ```
 
-* **VPN.key**  ?????  
+* **VPN.key**  Create file + Contens + Backup  
 Replace <USER> with your own DDNS
 Replace <PASSWORD> with your own DDNS
 
@@ -98,7 +99,7 @@ Replace <PASSWORD> with your own DDNS
 <PASSWORD>
 ```
 
-* **VPNstartscript.sh**  ?????  
+* **VPNstartscript.sh**  Create file + Contens + Backup  
 Replace <NAS_IP> with your own nas ip
 
 ```text
