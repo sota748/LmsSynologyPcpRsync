@@ -3,9 +3,9 @@
 # rsync - Raspberry Pi  
 
 ## Step 1: RPI changes (SSH):  
-* **Step 1a: Connect to the RPi with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
+**Step 1a: Connect to the RPi with a ssh client**  (I use PuTTY) and login in with the rsync user creeated in Step 1.  
 
-* **Step 1b: User "tc" must own all folders and files in /mnt/hd/Music**  for Rsync to be able to update the files' timestamps  
+**Step 1b: Change owner (chown) on foldres and files in /mnt/hd/Music**  for Rsync (user) to be able to update the files' timestamps  
 >Grants full ownership of the Music folder and all its contents to the user 'tc' and group 'staff'.
 ```text
 sudo chown -R tc:staff /mnt/hd/Music
@@ -22,14 +22,14 @@ sudo chown -R tc:staff /mnt/hd/Music
 ```text
 pcp bu
 ```
-* **Step 1c: RSYNCstartscript.sh**  Create file + Contens + Make file executable + Backup  
+**Step 1c: RSYNCstartscript.sh**  Create file + Contens + Make file executable + Backup  
 >Create file  
 ```text
 sudo nano RSYNCstartscript.sh
 ```
 >Contents  
-Replace <remote_source> with your own nas connection string  
-Replace <nas_ip> with your own nas ip  
+Replace <REMOTE_SOURCE> with your own nas connection string  
+Replace <NAS_IP> with your own nas ip  
 ```text
 #!/bin/sh
 export HOME="/home/tc"
@@ -38,12 +38,12 @@ export HOME="/home/tc"
 LOG="/home/tc/RSYNClog.txt"
 TMPLOG="/home/tc/RSYNClog.tmp"
 RSYNC_TMP_OUTPUT="/home/tc/RSYNCoutput.tmp"
-SRC=<remote_source>
+SRC=<REMOTE_SOURCE>
 DEST="/mnt/hd"
 RSYNC_BIN="/usr/local/bin/rsync"
 PING_BIN="/bin/ping"
 ECHO_BIN="/bin/echo"
-NAS_IP=<nas_ip>
+NAS_IP=<NAS_IP>
 
 # Script start time
 $ECHO_BIN "[START] $(date)" >> $LOG
@@ -124,7 +124,7 @@ sudo chmod +x /home/tc/ RSYNCstartscript.sh
 ```text
 pcp bu
 ```
-* **Step 1d: RSYNClog.txt**  
+**Step 1d: RSYNClog.txt**  
 >Create file  
 ```text
 touch RSYNClog.txt
@@ -133,7 +133,7 @@ touch RSYNClog.txt
 ```text
 pcp bu
 ```
->Example of Content (after )    
+>Example of Content (after rsync has run a few times)    
 ```text
 tc@pcp3:~$ cat RSYNClog.txt
 [START] Tue Aug 11 03:03:00 CEST 2026
@@ -166,8 +166,8 @@ tc@pcp3:~$ cat RSYNClog.txt
 [FINISH] Mon Aug 17 03:03:55 CEST 2026
 ```
 
-* **Home dir**  
->Content  
+**Home dir**  
+>Content, after installing rsync   
 ```text
 tc@pcp4:~$ ls -la
 total 32

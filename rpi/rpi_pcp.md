@@ -69,7 +69,6 @@ LMS webinterface: Menu
 ![LMS menu](rpi_pcp_2_menu.png)  
 
 ### LMS Settings -> Server  
-Start first time  
 
 **Basic Settings**  
 - Media Library Name: pcpX-lms  
