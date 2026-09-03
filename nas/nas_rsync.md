@@ -1,7 +1,8 @@
-# rsync - NAS
-[Return to README](../README.md)
+[Return to README](../README.md)  
 
-## Gathering knowledge:
+# rsync - NAS  
+
+## Gathering knowledge:  
 To understand how rsync works on a Synology NAS, I have found good information at the links below. (rigth click and "Open in a new Tap/Window") 
 - **Synology forum:** How to enable SSH key authentication on Synology NAS, https://community.synology.com/enu/forum/1/post/136213  
 - **YouTube:** Enable Key Based SSH Authentication For Synology Servers, https://www.youtube.com/watch?v=XN9SuzV08Ew  

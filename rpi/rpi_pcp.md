@@ -15,6 +15,7 @@ pCP webinterface: Menu
 PiCorePlayer is used as both Player and Server  
 
 **Setup General:**  
+Start first time  
 - pCP system password = xxxxxx (safe password, I use the same on all remote pCP's)  
 - Do you want to check for updates? = Yes  
 - Set Hostname = pcpX (X = number)  
@@ -27,13 +28,13 @@ PiCorePlayer is used as both Player and Server
 - Resize SD card = 8000MB  
 
 **Main Page:**  
-Install piCorePlayer extensions (Main Page -> Extensions -> main repository)  
+- Install piCorePlayer extensions (Main Page -> Extensions -> main repository)  
 - nano.tcz  
 - openvpn.tcz (for OpenVPN)  
 - rsync.tcz  (for rsync)  
 
 **Squeezelite Settings:**  
-- Audio output device settings  
+- Audio output device settings (follow the instructions on the page)  
 
 **Wifi Settings:**  
 - Wifi to mobile hotspot (only used for testing)  

@@ -1,5 +1,6 @@
-# OpenVPN - NAS
-[Return to README](../README.md)
+[Return to README](../README.md)  
+
+# OpenVPN - NAS  
 
 ## Step 1: DDNS:  
 - DDNS is a service that automatically updates your domain name to point to your home network, even when your internet provider changes your IP address.  
